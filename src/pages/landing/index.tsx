@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import { View } from "react-native";
+
+import { IStore } from "../../store/reducers";
 
 import BackgroundImage from "../../components/BackgroundImage";
 import CarouselCardItem from "../../components/CarouselCardItem";
-
 import imagePeopleCalendar from "../../assets/images/imagePeopleCalendar.png";
 
 import {
@@ -16,11 +18,10 @@ import {
     IconButtonNext,
 } from "./styles";
 
-import data from "../../store/data";
-
 const LandingPage = ({ navigation }: { navigation: any }) => {
     const isCarousel = useRef<any>(null);
     const [activeSlide, setActiveSlide] = useState(0);
+    const data = useSelector((store: IStore) => store.CarouselReducer.data);
 
     return (
         <BackgroundImage>
