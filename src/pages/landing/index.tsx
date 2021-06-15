@@ -6,6 +6,8 @@ import { IStore } from "../../store/reducers";
 
 import BackgroundImage from "../../components/BackgroundImage";
 import CarouselCardItem from "../../components/CarouselCardItem";
+
+import backgroundLandingPage from "../../assets/images/backgroundLandingPage.png";
 import imagePeopleCalendar from "../../assets/images/imagePeopleCalendar.png";
 
 import {
@@ -24,7 +26,7 @@ const LandingPage = ({ navigation }: { navigation: any }) => {
     const data = useSelector((store: IStore) => store.CarouselReducer.data);
 
     return (
-        <BackgroundImage>
+        <BackgroundImage image={backgroundLandingPage}>
             <Container>
                 <View>
                     <ImageLanding source={imagePeopleCalendar} />

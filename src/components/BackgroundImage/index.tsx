@@ -1,15 +1,14 @@
 import React from "react";
-import { Dimensions, ImageBackground } from "react-native";
-
-import backgroundLandingPage from "../../assets/images/backgroundLandingPage.png";
+import { Dimensions, ImageBackground, ImageSourcePropType } from "react-native";
 
 interface Props {
+    image: ImageSourcePropType;
     children: React.ReactNode;
 }
 
-const BackgroundImage: React.FC<Props> = ({ children }: Props) => (
+const BackgroundImage: React.FC<Props> = ({ image, children }: Props) => (
     <ImageBackground
-        source={backgroundLandingPage}
+        source={image}
         style={{
             width: Dimensions.get("screen").width,
             height: Dimensions.get("screen").height,
