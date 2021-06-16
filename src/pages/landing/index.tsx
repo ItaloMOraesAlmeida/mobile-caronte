@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import { useSelector } from "react-redux";
 import { View } from "react-native";
+import { useSelector } from "react-redux";
 
 import { IStore } from "../../store/reducers";
 
@@ -36,6 +36,7 @@ const LandingPage = ({ navigation }: { navigation: any }) => {
                         <ComponentPaginationStyled
                             dotsLength={data.length}
                             activeDotIndex={activeSlide}
+                            dotContainerStyle={{ height: 0 }}
                         />
                         <ComponentCarouselStyled
                             layout="tinder"

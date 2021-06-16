@@ -11,9 +11,9 @@ const ContainerTitle = styled.View`
 `;
 
 const TitleCaronte = styled.Text`
-    font-family: FredokaOne_400Regular;
+    font-family: ${(props) => props.theme.fonts.Primary};
     font-size: 25px;
-    color: #dedede;
+    color: ${(props) => props.theme.colors.White};
     margin-bottom: 100%;
 `;
 
@@ -22,16 +22,17 @@ const ContainerSubtitle = styled(ContainerTitle)`
 `;
 
 const SubtitleCaronte = styled.Text`
-    font-family: FredokaOne_400Regular;
+    font-family: ${(props) => props.theme.fonts.Primary};
     font-size: 20px;
-    color: #ffffff;
+    color: ${(props) => props.theme.colors.White};
     margin-bottom: 3px;
 `;
 
 const MessageSubtitleCaronte = styled.Text`
-    font-family: VarelaRound_400Regular;
+    font-family: ${(props) => props.theme.fonts.Secondary};
     font-size: 15px;
-    color: #dedede;
+    color: ${(props) => props.theme.colors.White};
+    opacity: 0.8;
 `;
 
 const ContainerButtons = styled.View`
@@ -48,26 +49,26 @@ const Button = styled.TouchableOpacity`
 `;
 
 const TextButton = styled.Text`
-    font-family: FredokaOne_400Regular;
+    font-family: ${(props) => props.theme.fonts.Primary};
     font-size: 15px;
 `;
 
 const ButtonAccess = styled(Button)`
-    background-color: #f5f5f5;
+    background-color: ${(props) => props.theme.colors.White};
     margin-bottom: 15px;
 `;
 
 const TextButtonAccess = styled(TextButton)`
-    color: #c23d5d;
+    color: ${(props) => props.theme.colors.Primary};
 `;
 
 const ButtonRegister = styled(Button)`
     border-width: 0.7px;
-    border-color: #f5f5f5;
+    border-color: ${(props) => props.theme.colors.White};
 `;
 
 const TextButtonRegister = styled(TextButton)`
-    color: #f5f5f5;
+    color: ${(props) => props.theme.colors.White};
 `;
 
 export {

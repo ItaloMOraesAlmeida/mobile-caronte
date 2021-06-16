@@ -18,7 +18,7 @@ const ContainerCarousel = styled.View`
     height: 216px;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: ${(props) => props.theme.colors.White};
     border-radius: 25px;
 `;
 
@@ -26,23 +26,23 @@ const ContainerPagination = styled.View`
     height: 0;
 `;
 
-const ComponentPaginationStyled = styled(Pagination).attrs({
+const ComponentPaginationStyled = styled(Pagination).attrs((props) => ({
     dotContainerStyle: { height: 0 },
     dotStyle: {
         width: 35,
         height: 8,
         borderRadius: 5,
         marginHorizontal: 3,
-        backgroundColor: "#C23D5D",
+        backgroundColor: props.theme.colors.Primary,
     },
     inactiveDotStyle: {
         width: 15,
         height: 15,
         borderRadius: 5,
         marginHorizontal: 3,
-        backgroundColor: "#DEC90B",
+        backgroundColor: props.theme.colors.Secondary,
     },
-})``;
+}))``;
 
 const ComponentCarouselStyled = styled(Carousel).attrs({
     sliderWidth: 250,
@@ -62,7 +62,7 @@ const ButtonNext = styled.TouchableOpacity`
     height: 76px;
     justify-content: center;
     align-items: center;
-    background-color: #dec90b;
+    background-color: ${(props) => props.theme.colors.Secondary};
     border-radius: 50px;
     margin-top: -38px;
 `;
@@ -71,10 +71,10 @@ interface IIconProps {
     center: string;
 }
 
-const IconButtonNext = styled(Feather).attrs({
+const IconButtonNext = styled(Feather).attrs((props) => ({
     size: 45,
-    color: "#C23D5D",
-})`
+    color: props.theme.colors.Primary,
+}))`
     margin-left: ${(props: IIconProps) => (props.center ? "5px" : "0px")};
 `;
 

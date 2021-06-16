@@ -6,6 +6,7 @@ import { useFonts } from "expo-font";
 import { FredokaOne_400Regular } from "@expo-google-fonts/fredoka-one";
 import { VarelaRound_400Regular } from "@expo-google-fonts/varela-round";
 
+import Theme from "./styles/themes";
 import store from "./store";
 
 import Routes from "./routes";
@@ -21,9 +22,11 @@ const App = () => {
     }
 
     return (
-        <Provider store={store}>
-            <Routes />
-        </Provider>
+        <Theme>
+            <Provider store={store}>
+                <Routes />
+            </Provider>
+        </Theme>
     );
 };
 
