@@ -1,8 +1,7 @@
 import styled from "styled-components/native";
 
 const Container = styled.ImageBackground`
-    width: ${(props) => props.theme.dimensions.screen.width};
-    height: ${(props) => props.theme.dimensions.screen.height};
+    flex: 1;
 `;
 
 export { Container };

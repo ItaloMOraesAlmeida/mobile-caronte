@@ -1,5 +1,7 @@
 import React from "react";
-import { Dimensions, ImageBackground, ImageSourcePropType } from "react-native";
+import { ImageSourcePropType } from "react-native";
+
+import { Container } from "./styles";
 
 interface Props {
     image: ImageSourcePropType;
@@ -7,15 +9,7 @@ interface Props {
 }
 
 const BackgroundImage: React.FC<Props> = ({ image, children }: Props) => (
-    <ImageBackground
-        source={image}
-        style={{
-            width: Dimensions.get("screen").width,
-            height: Dimensions.get("screen").height,
-        }}
-    >
-        {children}
-    </ImageBackground>
+    <Container source={image}>{children}</Container>
 );
 
 export default BackgroundImage;
