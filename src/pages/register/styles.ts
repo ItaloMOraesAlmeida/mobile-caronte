@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { Feather } from "@expo/vector-icons";
 
 const SafeAreaViewStyled = styled.SafeAreaView`
     flex: 1;
@@ -6,32 +7,33 @@ const SafeAreaViewStyled = styled.SafeAreaView`
 
 const Container = styled.View`
     flex: 1;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 `;
 
 const ContainerTitle = styled.View`
     flex: 1;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 25%;
 `;
 
 const TitleRegister = styled.Text`
     font-family: ${(prosp) => prosp.theme.fonts.Primary};
-    font-size: 20px;
     color: ${(prosp) => prosp.theme.colors.White};
+    font-size: 20px;
+    margin-top: 25%;
 `;
 
 const ContainerRegister = styled.View`
     flex: 1;
-    margin-top: 3%;
-    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
     align-items: center;
 `;
 
 const Button = styled.TouchableOpacity`
-    width: 85%;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     justify-content: center;
@@ -41,7 +43,6 @@ const Button = styled.TouchableOpacity`
 const ButtonGoogle = styled(Button)`
     background-color: #dfdfdf;
     flex-direction: row;
-    margin-bottom: 5px;
 `;
 
 const ImageGoogle = styled.Image`
@@ -52,35 +53,76 @@ const ImageGoogle = styled.Image`
 
 const TextButtonGoogle = styled.Text`
     font-family: ${(props) => props.theme.fonts.Secondary};
-    font-size: 15px;
     color: ${(props) => props.theme.colors.Black};
+    font-size: 15px;
 `;
 
-// ########################## Input
-const InputRegister = styled.TextInput`
+const ContainerDivider = styled.View`
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     margin-top: 10px;
-    width: 85%;
-    height: 43px;
+`;
+
+const Divider = styled.View`
+    border-width: 0.5px;
+    border-color: #9d9d9d;
+    width: 40%;
+`;
+
+const DividerLeft = styled(Divider)`
+    margin-right: 10px;
+`;
+
+const TextDivider = styled.Text`
+    font-family: ${(props) => props.theme.fonts.Secondary};
+    color: #9d9d9d;
+    font-size: 13px;
+`;
+
+const DividerRight = styled(Divider)`
+    margin-left: 10px;
+`;
+
+const ContainerInput = styled.View`
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
     border-width: 0.5px;
     border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: #c6c6c6;
-    font-size: 15px;
-    font-family: ${(props) => props.theme.fonts.Secondary};
-    padding-left: 10px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 5px;
 `;
-// ########################## End
+
+const IconInput = styled(Feather)`
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+`;
+
+const ButtonEye = styled.TouchableOpacity``;
+
+const Input = styled.TextInput`
+    font-family: ${(props) => props.theme.fonts.Secondary};
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 15px;
+    width: 70%;
+`;
 
 const ButtonRegister = styled(Button)`
     background-color: ${(props) => props.theme.colors.Primary};
-    margin-top: 30px;
+    margin-top: 15px;
 `;
 
 const TextButtonRegister = styled.Text`
     font-family: ${(props) => props.theme.fonts.Primary};
-    font-size: 18px;
     color: ${(props) => props.theme.colors.White};
+    font-size: 18px;
 `;
 
 export {
@@ -92,7 +134,14 @@ export {
     ButtonGoogle,
     ImageGoogle,
     TextButtonGoogle,
-    InputRegister,
+    ContainerDivider,
+    DividerLeft,
+    TextDivider,
+    DividerRight,
+    ContainerInput,
+    IconInput,
+    ButtonEye,
+    Input,
     ButtonRegister,
     TextButtonRegister,
 };
