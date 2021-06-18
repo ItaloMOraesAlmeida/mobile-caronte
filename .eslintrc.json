@@ -20,6 +20,9 @@
         "jsx-a11y",
         "react-hooks"
     ],
+    "settings": {
+        "import/core-modules": ["@expo/vector-icons"]
+    },
     "rules": {
         "react/jsx-filename-extension": [
             "error",
@@ -33,13 +36,14 @@
         "quotes": ["error", "double"],
         "indent": ["error", 4],
         "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
         "comma-dangle": [
             "error",
             {
                 "arrays": "always-multiline",
                 "objects": "always-multiline",
-                "imports": "never",
-                "exports": "never",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
                 "functions": "never"
             }
         ],
