@@ -34,7 +34,7 @@ import {
     TitleLinkResetPassword,
 } from "./styles";
 
-const LoginPage = () => {
+const LoginPage = ({ navigation }: { navigation: any }) => {
     const [eyeOff, setEyeOff] = useState(false);
 
     return (
@@ -93,7 +93,11 @@ const LoginPage = () => {
                             <TitleResetPassword>
                                 Esqueceu a senha?
                             </TitleResetPassword>
-                            <TouchableOpacity onPress={() => {}}>
+                            <TouchableOpacity
+                                onPress={() => {
+                                    navigation.navigate("resetPassword");
+                                }}
+                            >
                                 <TitleLinkResetPassword>
                                     Clique aqui!
                                 </TitleLinkResetPassword>

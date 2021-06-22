@@ -7,6 +7,7 @@ import AccessPage from "../pages/access";
 import LandingPage from "../pages/landing";
 import LoginPage from "../pages/login";
 import RegisterPage from "../pages/register";
+import ResetPasswordPage from "../pages/resetPassword";
 
 const Routes = () => {
     const { Navigator, Screen } = createStackNavigator();
@@ -28,6 +29,11 @@ const Routes = () => {
                     name="login"
                     options={{ headerShown: false }}
                     component={LoginPage}
+                />
+                <Screen
+                    name="resetPassword"
+                    options={{ headerShown: false }}
+                    component={ResetPasswordPage}
                 />
                 <Screen
                     name="register"
