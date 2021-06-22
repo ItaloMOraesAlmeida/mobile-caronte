@@ -14,32 +14,12 @@ const Routes = () => {
 
     return (
         <NavigationContainer>
-            <Navigator>
-                <Screen
-                    name="landing"
-                    options={{ headerShown: false }}
-                    component={LandingPage}
-                />
-                <Screen
-                    name="access"
-                    options={{ headerShown: false }}
-                    component={AccessPage}
-                />
-                <Screen
-                    name="login"
-                    options={{ headerShown: false }}
-                    component={LoginPage}
-                />
-                <Screen
-                    name="resetPassword"
-                    options={{ headerShown: false }}
-                    component={ResetPasswordPage}
-                />
-                <Screen
-                    name="register"
-                    options={{ headerShown: false }}
-                    component={RegisterPage}
-                />
+            <Navigator screenOptions={{ headerShown: false }}>
+                <Screen name="landing" component={LandingPage} />
+                <Screen name="access" component={AccessPage} />
+                <Screen name="login" component={LoginPage} />
+                <Screen name="resetPassword" component={ResetPasswordPage} />
+                <Screen name="register" component={RegisterPage} />
                 <Screen name="home" component={HomePage} />
             </Navigator>
         </NavigationContainer>

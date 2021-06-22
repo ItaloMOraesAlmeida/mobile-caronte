@@ -86,7 +86,11 @@ const LoginPage = ({ navigation }: { navigation: any }) => {
                                 />
                             </ButtonEye>
                         </ContainerInput>
-                        <ButtonAccess onPress={() => {}}>
+                        <ButtonAccess
+                            onPress={() => {
+                                navigation.navigate("home");
+                            }}
+                        >
                             <TextButtonAccess>Entrar</TextButtonAccess>
                         </ButtonAccess>
                         <ContainerResetPassword>
